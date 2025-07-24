@@ -19,7 +19,6 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    overflow: hidden;
 }
 
 #particles-js {
@@ -214,6 +213,7 @@ nav i {
 .projects {
     text-align: left;
     margin-bottom: 2rem;
+    display: block;
 }
 
 .projects h2 {

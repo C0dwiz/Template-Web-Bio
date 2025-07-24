@@ -2,98 +2,122 @@
 <html lang="ru">
 
 <head>
-    <meta charset='utf-8'>
+    <meta charset="utf-8">
     <title>codwiz | Digital Oasis</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1, viewport-fit=cover'>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="theme-color" content="#222">
-    <link rel="stylesheet" href="./styles.css">
-    <link rel="icon" type="image/x-icon" href="/assets/Lovedol.ico">
-    <link rel="preload" href="./fonts/Roboto-Regular.ttf" as="font" type="font/ttf" crossorigin>
+    <meta name="description" content="Personal page of codwiz - Developer and Anime enthusiast">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5, viewport-fit=cover">
+
+    <link rel="preload" href="./styles.css" as="style">
     <link rel="preload" href="./assets/profile_picture.jpg" as="image">
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pako/2.1.0/pako.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+    <link rel="preload" href="./assets/bg2.gif" as="image">
+
+    <link rel="stylesheet" href="./styles.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        media="print" onload="this.media='all'">
+
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" async></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pako/2.1.0/pako.min.js" async></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js" async></script>
 </head>
 
 <body>
-    <div id="particles-js"></div>
-    <div class="background">
-        <img src="./assets/bg2.gif" alt="Background GIF">
+    <div id="particles-js" aria-hidden="true"></div>
+    <div class="background" aria-hidden="true">
+        <img src="./assets/bg2.gif" alt="" role="presentation">
     </div>
 
-    <div class="container">
+    <main class="container">
         <header>
             <div class="profile-image-container">
-                <img src="./assets/profile_picture.jpg" alt="codwiz" class="profile-image">
-                <div id="jester-hat-container" class="jester-hat"></div>
-                <div class="glowing-border"></div>
+                <img src="./assets/profile_picture.jpg" alt="codwiz profile picture" class="profile-image" width="150"
+                    height="150">
+                <div id="jester-hat-container" class="jester-hat" aria-hidden="true"></div>
+                <div class="glowing-border" aria-hidden="true"></div>
             </div>
             <h1>codwiz</h1>
             <p class="bio">Developer │ Anime guy.</p>
         </header>
 
-        <nav>
-            <a href="https://github.com/c0dwiz" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-            <a href="https://t.me/GunyaKshin" target="_blank"><i class="fab fa-telegram"></i> Telegram</a>
-            <a href="https://mods.codwiz.life/" target="_blank"><i class="fab fa-telegram"></i> Modules</a>
-            <a href="https://discordapp.com/users/934099982917713960" target="_blank"><i class="fab fa-discord"></i>
-                Discord</a>
-            <a href="https://t.me/codwiz_fbot" target="_blank"><i class="fab fa-telegram"></i> Feedback</a>
-            <a href="https://t.me/codwiz_donate" target="_blank"><i class="fas fa-donate"></i> Donate</a>
-            <a href="https://music.yandex.ru/users/codwiz/playlists" target="_blank"><i class="fab fa-yandex-international"></i> Яндекс Музыка</a>
+        <nav aria-label="Main navigation">
+            <a href="https://github.com/c0dwiz" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"
+                    aria-hidden="true"></i> GitHub</a>
+            <a href="https://t.me/shuseks" target="_blank" rel="noopener noreferrer"><i class="fab fa-telegram"
+                    aria-hidden="true"></i> Telegram</a>
+            <a href="https://mods.codwiz.life/" target="_blank" rel="noopener noreferrer"><i class="fab fa-telegram"
+                    aria-hidden="true"></i> Modules</a>
+            <a href="https://discordapp.com/users/934099982917713960" target="_blank" rel="noopener noreferrer"><i
+                    class="fab fa-discord" aria-hidden="true"></i> Discord</a>
+            <a href="https://t.me/codwiz_fbot" target="_blank" rel="noopener noreferrer"><i class="fab fa-telegram"
+                    aria-hidden="true"></i> Feedback</a>
+            <a href="https://t.me/codwiz_donate" target="_blank" rel="noopener noreferrer"><i class="fas fa-donate"
+                    aria-hidden="true"></i> Donate</a>
+            <a href="https://music.yandex.ru/users/codwiz/playlists" target="_blank" rel="noopener noreferrer"><i
+                    class="fab fa-yandex-international" aria-hidden="true"></i> Яндекс Музыка</a>
         </nav>
 
-        <section class="projects">
-            <h2>Projects</h2>
+        <section class="projects" aria-labelledby="projects-heading">
+            <h2 id="projects-heading">Projects</h2>
             <div class="projects-toggle">
-                <button id="toggle-projects">
-                    <i class="fas fa-chevron-down"></i> View Projects
+                <button id="toggle-projects" aria-expanded="false" aria-controls="project-list">
+                    <i class="fas fa-chevron-down" aria-hidden="true"></i> View Projects
                 </button>
             </div>
             <div class="project-grid" id="project-list">
-                <a href="https://t.me/hikka_mods" class="project-item" target="_blank">
+                <a href="https://t.me/hikka_mods" class="project-item" target="_blank" rel="noopener noreferrer">
                     <div class="project-thumbnail">
-                        <img src="./assets/hmods.png" alt="H:Mods">
+                        <img src="./assets/hmods.png" alt="H:Mods project screenshot" loading="lazy" width="300"
+                            height="160">
                     </div>
                     <div class="project-details">
                         <h3>H:Mods</h3>
                         <p>This project writes modules for userbots Hikka/Heroku.</p>
                     </div>
-                </a>
+                </a>       
             </div>
         </section>
 
         <footer>
             <p>&copy; 2025 codwiz. All rights reserved.</p>
         </footer>
-    </div>
+    </main>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const projectList = document.getElementById('project-list');
             const toggleProjectsButton = document.getElementById('toggle-projects');
             const icon = toggleProjectsButton.querySelector('i');
-        
-            toggleProjectsButton.addEventListener('click', () => {
-                projectList.classList.toggle('show');
+
+            const toggleProjects = () => {
+                const isExpanded = projectList.classList.toggle('show');
                 icon.classList.toggle('fa-chevron-down');
                 icon.classList.toggle('fa-chevron-up');
-                toggleProjectsButton.textContent = projectList.classList.contains('show') ? 'Hide Projects' :
-                    'View Projects';
-            });
-        
-            async function loadTGS(filePath) {
-                const response = await fetch(filePath);
-                const buffer = await response.arrayBuffer();
-                const inflated = pako.inflate(new Uint8Array(buffer), {
-                    to: 'string'
-                });
-                return JSON.parse(inflated);
+                toggleProjectsButton.textContent = isExpanded ? 'Hide Projects' : 'View Projects';
+                toggleProjectsButton.setAttribute('aria-expanded', isExpanded);
+            };
+
+            toggleProjectsButton.addEventListener('click', toggleProjects);
+
+            if (typeof particlesJS !== 'undefined') {
+                particlesJS.load('particles-js', 'particles.json');
             }
-        
-            async function playAnimation(animationData) {
+
+            const loadAndPlayAnimation = async () => {
                 try {
+                    if (typeof pako === 'undefined' || typeof lottie === 'undefined') return;
+
+                    const response = await fetch('./assets/sticker.tgs');
+                    if (!response.ok) throw new Error('Failed to load animation');
+
+                    const buffer = await response.arrayBuffer();
+                    const inflated = pako.inflate(new Uint8Array(buffer), { to: 'string' });
+                    const animationData = JSON.parse(inflated);
+
                     lottie.loadAnimation({
                         container: document.getElementById('jester-hat-container'),
                         renderer: 'svg',
@@ -102,26 +126,15 @@
                         animationData: animationData
                     });
                 } catch (error) {
-                    console.error('Error loading animation:', error);
+                    console.error('Animation loading error:', error);
                 }
-            }
-        
-            async function loadAndPlayAnimation() {
-                try {
-                    const animationData = await loadTGS('./assets/sticker.tgs');
-                    playAnimation(animationData);
-                } catch (error) {
-                    console.error('Error loading animation:', error);
-                }
-            }
-            loadAndPlayAnimation();
-        
-            window.onload = function() {
-                particlesJS.load('particles-js', 'particles.json', function() {
-                    console.log('callback - particles.js config loaded');
-                });
             };
+
+            window.addEventListener('load', () => {
+                loadAndPlayAnimation();
+            });
         });
+
     </script>
 </body>
 
